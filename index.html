@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .hero {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+      .heroImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(30%);
+      }
+      .heading {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 2;
+        text-align: left;
+      }
+
+      .heading h1 {
+        font-size: 7em;
+        font-family: "Open Sans", sans-serif;
+      }
+      .heading p {
+        font-size: 1.5em;
+        font-family: "Nunito Sans", sans-serif;
+      }
+      .sectionA {
+        height: 100vh;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 200px;
+      }
+      .sectionAheading {
+        font-family: "Oswald", sans-serif;
+        font-size: 3em;
+        letter-spacing: 3px;
+      }
+      .sectionApara {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-family: "Nunito Sans", sans-serif;
+      }
+      .sectionApartB {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .sectionAbox {
+        width: 200px;
+        height: 200px;
+      }
+      .boxNumber {
+        font-family: "Oswald", sans-serif;
+        color: rgb(184, 178, 178);
+        font-family: "Oswald", sans-serif;
+      }
+      .boxHeading {
+        font-family: "Oswald", sans-serif;
+      }
+      .boxPara {
+        color: rgb(49, 49, 49);
+        font-family: "Nunito Sans", sans-serif;
+      }
+      .sectionB {
+        background-color: rgb(41, 41, 41);
+        color: white;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        margin-top: 200px;
+      }
+      .sectionBImage {
+        width: 70%;
+        height: 400px;
+        object-fit: cover;
+        filter: brightness(50%);
+        position: relative;
+        top: -200px;
+        border-radius: 10px;
+      }
+      .sectionBSec {
+        display: flex;
+        width: 100vw;
+        /* padding: 10%; */
+        justify-content: space-around;
+      }
+      .sectionBbox {
+        width: 200px;
+        height: 200px;
+        border: 2px solid white;
+      }
+      .sectionBboxHead {
+        font-family: "Oswald", sans-serif;
+        font-size: 4em;
+        font-weight: 900;
+      }
+      .sectionBTime {
+        font-family: "Nunito Sans", sans-serif;
+      }
+      .sectionBEnd {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 0.5em;
+        font-weight: 900;
+      }
+      .sectionC{
+        background-color: rgb(41, 41, 41);
+        color: white;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        /* margin-top: 200px; */
+        
+      }
+
+      .sectionCHeading{
+        font-family: "Oswald", sans-serif;
+        font-size: 4em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <img src="assets/heroImage.jpg" class="heroImage" />
+      <div class="heading">
+        <h1>STUDIO</h1>
+        <p>We provide a free day to experience our benefits of digital world</p>
+      </div>
+    </div>
+    <div class="sectionA">
+      <h1 class="sectionAheading">
+        DIGITAL WEB PRODUCTS<br />FOR AMAZING CLIENTS
+      </h1>
+      <p class="sectionApara">
+        We work closely with your development team. Marketting profissionals and
+        stackholders to design and develop UX and UI that make your website
+        application or software a joy to use,
+      </p>
+
+      <div class="sectionApartB">
+        <div class="sectionAbox">
+          <h2 class="boxNumber">01</h2>
+          <h3 class="boxHeading">PROTOTYPE</h3>
+          <p class="boxPara">
+            The more you use, The more you have in your signifant mind
+          </p>
+        </div>
+        <div class="sectionAbox">
+          <h2 class="boxNumber">02</h2>
+          <h3 class="boxHeading">SKECHING</h3>
+          <p class="boxPara">
+            The more you use, The more you have in your signifant mind
+          </p>
+        </div>
+        <div class="sectionAbox">
+          <h2 class="boxNumber">03</h2>
+          <h3 class="boxHeading">WIREFRAME</h3>
+          <p class="boxPara">
+            The more you use, The more you have in your signifant mind
+          </p>
+        </div>
+        <div class="sectionAbox">
+          <h2 class="boxNumber">04</h2>
+          <h3 class="boxHeading">UI-UX DESIGN</h3>
+          <p class="boxPara">
+            The more you use, The more you have in your signifant mind
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="sectionB">
+      <img src="assets/secImage.jpg" class="sectionBImage" />
+      <div class="sectionBSec">
+        <div className="sectionBbox">
+          <div class="sectionBboxHead">14</div>
+          <div class="sectionBTime">Days</div>
+          <hr
+            class=""
+            style="
+              height: 1px;
+              background-color: rgb(112, 112, 112);
+              border: none;
+            "
+          />
+          <div class="sectionBEnd">CASE RESEARCH</div>
+        </div>
+        <div className="sectionBbox">
+          <div class="sectionBboxHead">24</div>
+          <div class="sectionBTime">Hours</div>
+          <hr
+            class=""
+            style="
+              height: 1px;
+              background-color: rgb(112, 112, 112);
+              border: none;
+            "
+          />
+          <div class="sectionBEnd">UX PROTOTYPES</div>
+        </div>
+        <div className="sectionBbox">
+          <div class="sectionBboxHead">3</div>
+          <div class="sectionBTime">Months</div>
+          <hr
+            class=""
+            style="
+              height: 1px;
+              background-color: rgb(112, 112, 112);
+              border: none;
+            "
+          />
+          <div class="sectionBEnd">UI DESIGNS</div>
+        </div>
+        <div className="sectionBbox">
+          <div class="sectionBboxHead">90</div>
+          <div class="sectionBTime">Days</div>
+          <hr
+            class=""
+            style="
+              height: 1px;
+              background-color: rgb(112, 112, 112);
+              border: none;
+            "
+          />
+          <div class="sectionBEnd">FINAL LAUNCH</div>
+        </div>
+      </div>
+    </div>
+    <div class="sectionC">
+      <h2 class="sectionCHeading">THE THINGS <br> WE ARE ABLE TO DO</h2>
+    </div>
+  </body>
+</html>
