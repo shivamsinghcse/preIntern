@@ -1,265 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      .hero {
-        position: relative;
-        height: 100vh;
-        width: 100vw;
-      }
-      .heroImage {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: brightness(30%);
-      }
-      .heading {
-        position: absolute;
-        top: 50%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-        color: white;
-        z-index: 2;
-        text-align: left;
-      }
 
-      .heading h1 {
-        font-size: 7em;
-        font-family: "Open Sans", sans-serif;
-      }
-      .heading p {
-        font-size: 1.5em;
-        font-family: "Nunito Sans", sans-serif;
-      }
-      .sectionA {
-        height: 100vh;
-        box-sizing: border-box;
-        width: 100%;
-        padding: 200px;
-      }
-      .sectionAheading {
-        font-family: "Oswald", sans-serif;
-        font-size: 3em;
-        letter-spacing: 3px;
-      }
-      .sectionApara {
-        display: flex;
-        flex-wrap: wrap;
-        width: 70%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        font-family: "Nunito Sans", sans-serif;
-      }
-      .sectionApartB {
-        display: flex;
-        justify-content: space-evenly;
-      }
-      .sectionAbox {
-        width: 200px;
-        height: 200px;
-      }
-      .boxNumber {
-        font-family: "Oswald", sans-serif;
-        color: rgb(184, 178, 178);
-        font-family: "Oswald", sans-serif;
-      }
-      .boxHeading {
-        font-family: "Oswald", sans-serif;
-      }
-      .boxPara {
-        color: rgb(49, 49, 49);
-        font-family: "Nunito Sans", sans-serif;
-      }
-      .sectionB {
-        background-color: rgb(41, 41, 41);
-        color: white;
-        width: 100vw;
-        height: 100vh;
-        text-align: center;
-        margin-top: 200px;
-      }
-      .sectionBImage {
-        width: 70%;
-        height: 400px;
-        object-fit: cover;
-        filter: brightness(50%);
-        position: relative;
-        top: -200px;
-        border-radius: 10px;
-      }
-      .sectionBSec {
-        display: flex;
-        width: 100vw;
-        /* padding: 10%; */
-        justify-content: space-around;
-      }
-      .sectionBbox {
-        width: 200px;
-        height: 200px;
-        border: 2px solid white;
-      }
-      .sectionBboxHead {
-        font-family: "Oswald", sans-serif;
-        font-size: 4em;
-        font-weight: 900;
-      }
-      .sectionBTime {
-        font-family: "Nunito Sans", sans-serif;
-      }
-      .sectionBEnd {
-        font-family: "Nunito Sans", sans-serif;
-        font-size: 0.5em;
-        font-weight: 900;
-      }
-      .sectionC{
-        background-color: rgb(41, 41, 41);
-        color: white;
-        width: 100vw;
-        height: 100vh;
-        text-align: center;
-        /* margin-top: 200px; */
-        
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- Include GSAP library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <!-- Your existing styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-      .sectionCHeading{
-        font-family: "Oswald", sans-serif;
-        font-size: 4em;
-      }
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .heroImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(30%);
+    }
+
+    .heading {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      color: white;
+      z-index: 2;
+      text-align: left;
+    }
+
+    .heading h1 {
+      font-size: 7em;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .heading p {
+      font-size: 1.5em;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .sectionA {
+      height: 100vh;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 200px;
+    }
+
+    .sectionAheading {
+      font-family: "Oswald", sans-serif;
+      font-size: 3em;
+      letter-spacing: 3px;
+    }
+
+    .sectionApara {
+      display: flex;
+      flex-wrap: wrap;
+      width: 70%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .sectionApartB {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .sectionAbox {
+      width: 200px;
+      height: 200px;
+    }
+
+    .boxNumber {
+      font-family: "Oswald", sans-serif;
+      color: rgb(184, 178, 178);
+    }
+
+    .boxHeading {
+      font-family: "Oswald", sans-serif;
+    }
+
+    .boxPara {
+      color: rgb(49, 49, 49);
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .sectionB {
+      background-color: rgb(41, 41, 41);
+      color: white;
+      width: 100vw;
+      height: 100vh;
+      text-align: center;
+      margin-top: 200px;
+    }
+
+    .sectionBImage {
+      width: 70%;
+      height: 400px;
+      object-fit: cover;
+      filter: brightness(50%);
+      position: relative;
+      top: -200px;
+      border-radius: 10px;
+    }
+
+    .sectionBSec {
+      display: flex;
+      width: 80vw;
+      margin: auto;
+      justify-content: space-around;
+    }
+
+    .sectionBbox {
+      width: 200px;
+      height: 200px;
+      border: 2px solid white;
+    }
+
+    .sectionBboxHead {
+      font-family: "Oswald", sans-serif;
+      font-size: 6em;
+      font-weight: 900;
+    }
+
+    .sectionBTime {
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .sectionBEnd {
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 1em;
+      margin-top: 2ch;
+      font-weight: 900;
+    }
+
+    .sectionC {
+      background-color: rgb(41, 41, 41);
+      color: white;
+      width: 100vw;
+      text-align: center;
+      padding-bottom: 200px;
+    }
+
+    .sectionCHeading {
+      font-family: "Oswald", sans-serif;
+      font-size: 4em;
+    }
+
+    .sectionCmain {
+      display: flex;
+      width: 80%;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+      margin: auto;
+    }
+
+    .sectionCmainBox {
+      width: 270px;
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      padding: 20px;
+    }
+
+    .sectionCsvg {
+      height: 70px;
+      margin: 10px;
+      filter: invert(100%);
+    }
+
+    .sectionCmainBox>h3 {
+      margin: 10px;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .sectionCmainBox>p {
+      font-family: "Nunito Sans", sans-serif;
+      padding: 20px;
+    }
+
+    .sectionD {
+      width: 100vw;
+      background-color: #1a1919;
+      justify-content: center;
+
+    }
+
+    .sectionDhead {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 200px;
+
+    }
+
+    .sectionDBlueBox {
+      width: 320px;
+      height: 370px;
+      background-color: skyblue;
+      position: relative;
+      top: -70px;
+      left: 300px;
+      color: #1a1919;
+      line-height: 1.5;
+      font-size: 1.5em;
+      font-weight: 100;
+      text-align: left;
+      font-family: "Nunito Sans", sans-serif;
+      padding: 90px 70px
+    }
+
+    .sectionDheadBox {
+      width: 400px;
+      color: white;
+      font-family: "Oswald", sans-serif;
+      font-size: 5em;
+      text-align: left;
+      font-weight: 900;
+    }
+
+    .userProfile {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .userProfileDetails {}
+
+    .userProfileImage {
+      width: 70px;
+      height: 70px;
+      margin-right: 20px;
+      object-fit: cover;
+      border-radius: 100px;
+    }
+
+    .sectionDMain {
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sectionDMainHeading {
+      font-family: "Oswald", sans-serif;
+      font-size: 5em;
+      padding-left: 200px;
+      font-weight: 900;
+    }
+    
+    .sectionDMainText {
+      font-size: 1.5em;
+      font-family: "Nunito Sans", sans-serif;
+      padding-right: 100px;
+    }
+    
+    .photos {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      filter: grayscale(100%);
+    }
+    
+    .photoSection {
+      display: flex;
+      width: 80%;
+      justify-content: space-evenly;
+      margin: auto;
+      position: relative;
+      bottom: -100px;
+    }
+    
+    .photoHolder > h4 {
+      font-family: "Nunito Sans", sans-serif;
+    }
+    .patnerHead{
+      font-size: 5em;
+      font-family: "Oswald", sans-serif;
+      padding: 100px;
+      line-height: 1.5;
+      font-weight: 900;
+    }
+    .patners{
+      margin-top: 200px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .brandLogoContainer{
+      padding: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .brandLogo{
+      width: 200px;
+      filter: grayscale(100%);
+    }
+    .footer{
+      background-color: #1a1919;
+      /* background-image: url(./assets/earth.png); */
+      color: white;
+      height: 500px;
+      padding: 200px;
+    }
+    .footer > h3{
+      font-family: "Oswald", sans-serif;
+      font-size: 3em;
+    }
+    .footer > span {
+      font-family: "Nunito Sans", sans-serif;
+        font-size: 6em;  
+      
+    }
+    
     </style>
-  </head>
-  <body>
-    <div class="hero">
-      <img src="assets/heroImage.jpg" class="heroImage" />
-      <div class="heading">
-        <h1>STUDIO</h1>
-        <p>We provide a free day to experience our benefits of digital world</p>
-      </div>
-    </div>
-    <div class="sectionA">
-      <h1 class="sectionAheading">
-        DIGITAL WEB PRODUCTS<br />FOR AMAZING CLIENTS
-      </h1>
-      <p class="sectionApara">
-        We work closely with your development team. Marketting profissionals and
-        stackholders to design and develop UX and UI that make your website
-        application or software a joy to use,
-      </p>
+</head>
 
-      <div class="sectionApartB">
-        <div class="sectionAbox">
-          <h2 class="boxNumber">01</h2>
-          <h3 class="boxHeading">PROTOTYPE</h3>
-          <p class="boxPara">
-            The more you use, The more you have in your signifant mind
-          </p>
-        </div>
-        <div class="sectionAbox">
-          <h2 class="boxNumber">02</h2>
-          <h3 class="boxHeading">SKECHING</h3>
-          <p class="boxPara">
-            The more you use, The more you have in your signifant mind
-          </p>
-        </div>
-        <div class="sectionAbox">
-          <h2 class="boxNumber">03</h2>
-          <h3 class="boxHeading">WIREFRAME</h3>
-          <p class="boxPara">
-            The more you use, The more you have in your signifant mind
-          </p>
-        </div>
-        <div class="sectionAbox">
-          <h2 class="boxNumber">04</h2>
-          <h3 class="boxHeading">UI-UX DESIGN</h3>
-          <p class="boxPara">
-            The more you use, The more you have in your signifant mind
-          </p>
-        </div>
+<body>
+  <div class="hero">
+    <img src="assets/heroImage.jpg" class="heroImage" />
+    <div class="heading">
+      <h1>STUDIO</h1>
+      <p>We provide a free day to experience our benefits of digital world</p>
+    </div>
+  </div>
+  <div class="sectionA">
+    <h1 class="sectionAheading">
+      DIGITAL WEB PRODUCTS<br />FOR AMAZING CLIENTS
+    </h1>
+    <p class="sectionApara">
+      We work closely with your development team. Marketting profissionals and
+      stackholders to design and develop UX and UI that make your website
+      application or software a joy to use,
+    </p>
+
+    <div class="sectionApartB">
+      <div class="sectionAbox">
+        <h2 class="boxNumber">01</h2>
+        <h3 class="boxHeading">PROTOTYPE</h3>
+        <p class="boxPara">
+          The more you use, The more you have in your signifant mind
+        </p>
+      </div>
+      <div class="sectionAbox">
+        <h2 class="boxNumber">02</h2>
+        <h3 class="boxHeading">SKECHING</h3>
+        <p class="boxPara">
+          The more you use, The more you have in your signifant mind
+        </p>
+      </div>
+      <div class="sectionAbox">
+        <h2 class="boxNumber">03</h2>
+        <h3 class="boxHeading">WIREFRAME</h3>
+        <p class="boxPara">
+          The more you use, The more you have in your signifant mind
+        </p>
+      </div>
+      <div class="sectionAbox">
+        <h2 class="boxNumber">04</h2>
+        <h3 class="boxHeading">UI-UX DESIGN</h3>
+        <p class="boxPara">
+          The more you use, The more you have in your signifant mind
+        </p>
       </div>
     </div>
-    <div class="sectionB">
-      <img src="assets/secImage.jpg" class="sectionBImage" />
-      <div class="sectionBSec">
-        <div className="sectionBbox">
-          <div class="sectionBboxHead">14</div>
-          <div class="sectionBTime">Days</div>
-          <hr
-            class=""
-            style="
+  </div>
+  <div class="sectionB">
+    <img src="assets/secImage.jpg" class="sectionBImage" />
+    <div class="sectionBSec">
+      <div className="sectionBbox">
+        <div class="sectionBboxHead">14</div>
+        <div class="sectionBTime">Days</div>
+        <hr class="" style="
+              height: 1px;
+              width: 200px;
+              background-color: rgb(112, 112, 112);
+              border: none;
+            " />
+        <div class="sectionBEnd">CASE RESEARCH</div>
+      </div>
+      <div className="sectionBbox">
+        <div class="sectionBboxHead">24</div>
+        <div class="sectionBTime">Hours</div>
+        <hr class="" style="
+              height: 1px;
+              width: 200px;
+              background-color: rgb(112, 112, 112);
+              border: none;
+            " />
+        <div class="sectionBEnd">UX PROTOTYPES</div>
+      </div>
+      <div className="sectionBbox">
+        <div class="sectionBboxHead">3</div>
+        <div class="sectionBTime">Months</div>
+        <hr class="" style="
+              height: 1px;
+              width: 200px;
+              background-color: rgb(112, 112, 112);
+              border: none;
+            " />
+        <div class="sectionBEnd">UI DESIGNS</div>
+      </div>
+      <div className="sectionBbox">
+        <div class="sectionBboxHead">90</div>
+        <div class="sectionBTime">Days</div>
+        <hr class="" style="
               height: 1px;
               background-color: rgb(112, 112, 112);
               border: none;
-            "
-          />
-          <div class="sectionBEnd">CASE RESEARCH</div>
-        </div>
-        <div className="sectionBbox">
-          <div class="sectionBboxHead">24</div>
-          <div class="sectionBTime">Hours</div>
-          <hr
-            class=""
-            style="
-              height: 1px;
-              background-color: rgb(112, 112, 112);
-              border: none;
-            "
-          />
-          <div class="sectionBEnd">UX PROTOTYPES</div>
-        </div>
-        <div className="sectionBbox">
-          <div class="sectionBboxHead">3</div>
-          <div class="sectionBTime">Months</div>
-          <hr
-            class=""
-            style="
-              height: 1px;
-              background-color: rgb(112, 112, 112);
-              border: none;
-            "
-          />
-          <div class="sectionBEnd">UI DESIGNS</div>
-        </div>
-        <div className="sectionBbox">
-          <div class="sectionBboxHead">90</div>
-          <div class="sectionBTime">Days</div>
-          <hr
-            class=""
-            style="
-              height: 1px;
-              background-color: rgb(112, 112, 112);
-              border: none;
-            "
-          />
-          <div class="sectionBEnd">FINAL LAUNCH</div>
-        </div>
+            " />
+        <div class="sectionBEnd">FINAL LAUNCH</div>
       </div>
     </div>
-    <div class="sectionC">
-      <h2 class="sectionCHeading">THE THINGS <br> WE ARE ABLE TO DO</h2>
+  </div>
+  <div class="sectionC">
+    <h2 class="sectionCHeading">THE THINGS <br> WE ARE ABLE TO DO</h2>
+    <div class="sectionCmain">
+      <div class="sectionCmainBox">
+        <img src="assets/bulb-light-svgrepo-com.svg" alt="bulb" class="sectionCsvg">
+        <h3>Digital Products</h3>
+        <p>Digital Branding Web & Mobile Sites User Interface Design Responsive Techs</p>
+      </div>
+      <div class="sectionCmainBox" style="background-color: rgb(26, 23, 23);"> <img src="assets/branch-svgrepo-com.svg"
+          alt="bulb" class="sectionCsvg">
+        <h3>Digital Products</h3>
+        <p>Digital Branding Web & Mobile Sites User Interface Design Responsive Techs</p>
+      </div>
+      <div class="sectionCmainBox"> <img src="assets/layer-svgrepo-com.svg" alt="bulb" class="sectionCsvg">
+        <h3>Digital Products</h3>
+        <p>Digital Branding Web & Mobile Sites User Interface Design Responsive Techs</p>
+      </div>
     </div>
-  </body>
+  </div>
+  <div class="sectionD">
+    <div class="sectionDhead">
+      <div class="sectionDBlueBox">
+        <div>We work closely with your development team. Marketting profissionals and stackholders to design and develop
+          UX and UI that make your website. applicaltion or software a joy to use</div>
+        <hr style="
+    height: 1px;
+    width: 300px;
+    margin-top: 30px;
+    background-color: rgb(112, 112, 112);
+    border: none;
+  ">
+        <div class="userProfile">
+          <img src="./assets/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="man" class="userProfileImage">
+          <div class="userProfileDetails">
+            <h4>Marcus James</h4>
+            <h5>IBIS HOTEL MANAGER</h5>
+          </div>
+        </div>
+      </div>
+      <div class="sectionDheadBox">STUDIO PROUD IS QUALITY OF PARTNERS</div>
+    </div>
+    <div class="sectionDMain">
+      <div class="sectionDMainHeading">ALL ABOUT THE OUR TEAM</div>
+      <div class="sectionDMainText">We work closely with your development team. Marketting profissionals and
+        stackholders to design and develop
+        UX and UI that make your website. applicaltion or software a joy to use</div>
+    </div>
+    <div class="photoSection">
+      <div class="photoHolder">
+        <img src="./assets/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" class="photos">
+        <h4>Jessica Tanana</h4>
+      </div>
+      <div class="photoHolder">
+        <img src="./assets/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" class="photos">
+        <h4>Jessica Tanana</h4>
+      </div>
+      <div class="photoHolder">
+        <img src="./assets/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" class="photos">
+        <h4>Jessica Tanana</h4>
+      </div>
+      <div class="photoHolder">
+        <img src="./assets/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" class="photos">
+        <h4>Jessica Tanana</h4>
+      </div>
+      <div class="photoHolder">
+        <img src="./assets/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" class="photos">
+        <h4>Jessica Tanana</h4>
+      </div>
+    </div>
+  </div>
+  <div class="patners">
+    <div class="patnerHead">AGENSY PROUD IS QUALITY OF PARTNERS</div>
+    <div class="brandLogoContainer">
+      <img src="./assets/879_audi.jpg" alt="" class="brandLogo">
+      <img src="./assets/Arch Linux.png" alt="" class="brandLogo">
+      <img src="./assets/android-new-20195887.logowik.com.webp" alt="" class="brandLogo">
+      <img src="./assets/envoy.jpg" alt="" class="brandLogo">
+      <img src="./assets/nginx9076.jpg" alt="" class="brandLogo">
+      <img src="./assets/sentry.jpg" alt="" class="brandLogo">
+      <img src="./assets/webflow-black5928.logowik.com.webp" alt="" class="brandLogo">
+      <img src="./assets/nordea.jpg" alt="" class="brandLogo">
+      <img src="./assets/airbnb.png" alt="" class="brandLogo">
+    </div>
+  </div>
+  <div class="footer">
+<h3>
+  LET'S HAVE A TALK ABOUT YOUR PROJECT.
+</h3>
+<span>
+  Need more information or want to get in touch?
+</span>
+  </div>
+  <!-- Other sections of your page -->
+  
+  <script>
+    // GSAP animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Example animation: Fade in .heading on scroll
+    // gsap.to('.heading', {
+    //   opacity: 0,
+    //   y: 100,
+    //   scrollTrigger: {
+    //     trigger: '.hero',
+    //     start: 'top 50%',
+    //     end: 'top 30%',
+    //     scrub: true
+    //   }
+    // });
+
+    // Example animation: Fade in .sectionAbox elements on scroll
+    gsap.from('.sectionAbox', ' .sectionCmain', {
+      opacity: 0,
+      y: 100,
+      stagger: 0.2, // Adds a stagger effect to each element
+      scrollTrigger: {
+        trigger: '.sectionApartB',
+        start: 'top 80%', // Adjust as needed
+        end: 'bottom 20%', // Adjust as needed
+        scrub: true
+      }
+    });
+
+    // You can define more animations here
+  </script>
+</body>
+
 </html>
